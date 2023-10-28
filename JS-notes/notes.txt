@@ -1,0 +1,11 @@
+RESOURCES 
+ 
+1. w3 schools [https://www.w3schools.com/js/default.asp]  
+
+2. mdn [https://developer.mozilla.org/en-US/docs/Web/JavaScript]  
+ 
+3. Tech Global Training [https://techglobal-training.com/login] 
+    USER: TechGlobal
+    PASS: Test1234!
+  
+4. GitHub class files [https://github.com/TechGlobalSchool/js-intro-8]
