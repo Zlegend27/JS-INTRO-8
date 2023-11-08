@@ -11,3 +11,5 @@ RESOURCES
 4. GitHub class files [https://github.com/TechGlobalSchool/js-intro-8]
  
 5. JavaScript fundementals refresher [https://www.youtube.com/watch?v=x2RNw4M6cME]
+
+6. JSON viewer (for easier viewing collections) [https://jsonviewer.stack.hu/]

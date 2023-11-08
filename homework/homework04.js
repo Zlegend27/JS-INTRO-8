@@ -163,10 +163,9 @@ Expected Result:
 */
 
 let arr = ['Germany', 'Argentina', 'Ukraine', 'Romania'];
-for(const a of arr) {
-    a.charCodeAt();
-}
- console.log(arr);
+
+console.log(arr.sort());
+
 
 
 // Task 9 
@@ -182,6 +181,7 @@ Expected Result:
 [ 'Scooby Doo', 'Snoopy', 'Blue', 'Pluto', 'Dino', 'Sparky' ]
 true
 */ 
+ 
 
 
 
@@ -199,3 +199,18 @@ Expected Result:
 [ 'Azrael', 'Garfield', 'Sylvester', 'Tom' ]
 false
 */
+ 
+const arr2 = ['Garfield', 'Tom', 'Sylvester', 'Azrael'];
+
+
+if(arr2.includes('Garfield') && arr2.includes('Felix')) {
+    console.log(true);
+    console.log(arr2.sort());
+}
+else {
+    console.log(false);
+    console.log(arr2.sort());
+}
+
+
+
