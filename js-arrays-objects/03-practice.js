@@ -31,3 +31,62 @@ const appleStore = [
 // Find the product with the biggest quantity   -> AirPods Pro
 // Find the product with the smallest quantity  -> MacBook Pro 16-inch
 // Find all the product names   -> [ 'iPhone 14 Pro', 'MacBook Pro 16-inch', 'iPad Air', 'Apple Watch Series 7', 'AirPods Pro' ]
+
+let mostExpensive = 0;
+
+for(const most of appleStore) {
+    if(most.price > mostExpensive) mostExpensive = most.price;
+}
+ 
+for(const most of appleStore) {
+    if(most.price === mostExpensive) {
+        console.log(most.productName);
+        break;
+    }
+};
+
+
+let leastExpensive = mostExpensive;
+
+for(const least of appleStore) {
+    if(least.price < leastExpensive) leastExpensive = least.price;
+} 
+
+for(const least of appleStore) {
+    if(least.price === leastExpensive) {
+        console.log(least.productName);
+        break;
+    }
+}
+
+
+const bigQuantity = {
+    productName: '' , 
+    quantity: 0
+};
+
+for(const big of appleStore) {
+    if(bigQuantity.quantity < big.quantity) {
+        bigQuantity.quantity = big.quantity;
+        bigQuantity.productName = big.productName;
+    }
+}
+
+console.log(bigQuantity.productName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
