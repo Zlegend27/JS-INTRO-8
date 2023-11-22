@@ -20,14 +20,32 @@ console.log(numbers.reduce((max, curr) => Math.max(max, curr), -Infinity));
 console.log(numbers.reduce((min, curr) => Math.min(min, curr), Infinity));
 
 
+function abc(sum, number) {
+    return sum + number;
+}
+
+console.log(abc(3, 5));
+
+
 const fruits = ['Apple', 'Orange', 'Kiwi', 'Pineapple', 'Mango', 'Melon']; 
 
 // count how many elements has 'apple' ignoring cases
 // count how many elements has 'i' ignoring cases
 // cont how many elements ends with 'e'
 
-function abc(sum, number) {
-    return sum + number;
+
+
+let countApple = 0;
+
+for(const fruit of fruits) {
+    if(fruit.toLowerCase().includes('apple')) countApple++;
 }
 
-console.log(abc(3, 5));
+console.log(countApple);
+
+console.log(fruits.filter(fruit => fruit.toLowerCase().includes('apple').length));
+
+fruits.reduce((countApple, curr) => {
+    if(curr.toLowerCase().includes('apple')) return countApple + 1;
+    else return countApple;
+})
