@@ -117,3 +117,9 @@ for(const student of students) {
 console.log(`${youngest.fname} ${youngest.lname} is the youngest with the age of ${youngest.age}`);
 
 console.log('\n---------------------------\n');
+
+
+// Find and return the fullname of students who take Math
+
+const mathStudents = students.filter(x => x.className === 'Math').map(x => x.fname + ' ' + x.lname);
+console.log(mathStudents);
