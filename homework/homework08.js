@@ -166,20 +166,13 @@ removeArraySpecialsDigits(["Automation", "123#$%tool"])  -> ["Automation",
 "tool"]
 */
 
-function removeArraySpecialsDigits(arr) {
-    const removeSpecialDigit = arr.filter(char => char.filter(letter => {
 
-        letter.charCodeAt() >= 65 && letter.charCodeAt() <= 90 ||
-        letter.charCodeAt() >= 97 && letter.charCodeAt() <= 122 ||
-        letter.charCodeAt() === 32
-    }));
-        
+const removeArraySpecialsDigits = (arr) => {
+    return arr.map(str => str.split('').filter(char => char.toLowerCase() >= 'a' && char.toLowerCase() <= 'z').join(''))
 
-        return removeSpecialDigit;
 }
 
 console.log(removeArraySpecialsDigits(["123Javascript", "#$%is", "fun"]));
-
 
 // Task 8 
 /*
@@ -193,9 +186,16 @@ getCommons( ["Javascript", "is", "fun"], ["Javascript", "C#", "Python"] )
 getCommons( ["Javascript", "C#", "C#"], ["Python", "C#", "C++"] )  -> ["C#"]
 */
 
-function getCommons(arr1, arr2) {
-    const commonArr = arr1[0];
+const getCommons = (arr1, arr2) => {
+    arr1 = arr1.filter(i => arr2.includes(i))
 
+    let result = [];
+
+    arr1.forEach(i => {
+        if (!result.includes(i)) result.push(i);
+    })
+
+    return result;
 }
 
 
@@ -221,3 +221,13 @@ function noXInVariables(arr) {
 
 console.log(noXInVariables(["xyz", 123, "#$%"]));
 console.log(noXInVariables(["x", 123, "#$%"]));
+
+
+const noXInVariables = (arr) => {
+    arr = arr.map(el => {
+        if (typeof el === 'string') return el.split('').filter(x => x.toLowerCase() !== 'x').join('');
+        else return el;
+    })
+
+    return arr.filter(x => x)
+}
